@@ -39,11 +39,11 @@ class Grade
         System.out.println("Your grade is A");
         }
         else if(avg>=70){
-        System.out.println("Good");
+        System.out.println(" Very Good");
         System.out.println("Your grade is B");
         }
         else if(avg>=60){
-        System.out.println("Better");
+        System.out.println("Good ");
         System.out.println("Your grade is C");
         }
         else if(avg>=50){
