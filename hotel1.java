@@ -7,8 +7,6 @@ class hotel1
         Scanner sc = new Scanner(System.in);
 
         System.out.println("\n\t\t===== HOTEL ROOM RESERVATION =====");
-
-        // Customer Details
         System.out.print("\nEnter Your Name: ");
         String name = sc.nextLine();
 
@@ -18,13 +16,9 @@ class hotel1
         System.out.print("Enter Number of Guests: ");
         int guests = sc.nextInt();
         sc.nextLine();
-
-        // Room Stacks
         Stack<Integer> standardRoom = new Stack<>();
         Stack<Integer> deluxeRoom = new Stack<>();
         Stack<Integer> suiteRoom = new Stack<>();
-
-        // Adding rooms
         for(int i = 101; i <= 105; i++)
             standardRoom.push(i);
 
@@ -33,8 +27,6 @@ class hotel1
 
         for(int i = 301; i <= 305; i++)
             suiteRoom.push(i);
-
-        // Room Types
         System.out.println("\nRoom Types Available");
         System.out.println("1. Standard Room  - ₹2500");
         System.out.println("2. Deluxe Room    - ₹3500");
@@ -61,8 +53,6 @@ class hotel1
                 System.out.println("Invalid Room Type!");
                 return;
         }
-
-        // Room Selection
         System.out.print("\nEnter Room Number You Want: ");
         int roomNo = sc.nextInt();
         sc.nextLine();
@@ -92,18 +82,13 @@ class hotel1
         }
 
         System.out.println("Room Booked Successfully!");
-
-        // ID Proof
         System.out.print("\nEnter ID Proof: ");
         String id = sc.nextLine();
-
-        // Confirmation
         System.out.print("Confirm Booking? (yes/no): ");
         String confirm = sc.nextLine().toLowerCase();
 
         if(confirm.equals("no"))
         {
-            // Returning room back
             if(room.equals("standard"))
                 standardRoom.push(roomNo);
 
@@ -116,8 +101,6 @@ class hotel1
             System.out.println("\nBooking Cancelled Successfully!");
             return;
         }
-
-        // Bill
         System.out.println("\n========= BOOKING DETAILS =========");
 
         System.out.println("Customer Name : " + name);
