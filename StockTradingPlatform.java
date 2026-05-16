@@ -1,6 +1,4 @@
 import java.util.*;
-
-// Stock Class
 class Stock {
 
     String symbol;
@@ -11,13 +9,9 @@ class Stock {
         this.price = price;
     }
 }
-
-// Portfolio Class
 class Portfolio {
 
     HashMap<String, Integer> holdings = new HashMap<>();
-
-    // Buy Stock
     void buyStock(Stock stock, int qty) {
 
         holdings.put(
@@ -27,8 +21,6 @@ class Portfolio {
 
         System.out.println("Bought " + qty + " shares of " + stock.symbol);
     }
-
-    // Sell Stock
     void sellStock(Stock stock, int qty) {
 
         if (!holdings.containsKey(stock.symbol)) {
@@ -47,8 +39,6 @@ class Portfolio {
 
         System.out.println("Sold " + qty + " shares of " + stock.symbol);
     }
-
-    // Display Portfolio
     void displayPortfolio() {
 
         System.out.println("\n--- Portfolio ---");
@@ -63,8 +53,6 @@ class Portfolio {
         }
     }
 }
-
-// Main Class
 public class StockTradingPlatform {
 
     public static void main(String[] args) {
